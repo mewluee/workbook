@@ -9,4 +9,4 @@
 
 
 ## 1. JAVA
-- [캡슐화, 다형성, 추상화, 상속](https://github.com/mewluee/workbook/blob/main/interfaceExample/src/Main.java) - 2022.12.30 TIL
+- [캡슐화, 다형성, 추상화, 상속](https://github.com/mewluee/workbook/blob/main/interfaceExample/src/Main.java) - 2022.12.30 [TIL](https://ld-luee.tistory.com/15)
