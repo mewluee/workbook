@@ -1,14 +1,13 @@
+import annotationAndRambdaExample.AnnotationAndRambdaExample;
 import enumExample.EnumExample;
 import genericExample.GenericExample;
 
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
 
-        /*EnumExample enumExample=new EnumExample();
-        enumExample.result();*/
-
-        GenericExample genericExample=new GenericExample();
-        genericExample.result();
+        AnnotationAndRambdaExample aare=new AnnotationAndRambdaExample();
+        aare.result();
     }
 }

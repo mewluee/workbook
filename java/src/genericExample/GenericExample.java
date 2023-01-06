@@ -37,7 +37,7 @@ public class GenericExample {
             // Object클래스는 최상위클래스라서!
         }
 
-        // 여기 예제대로 쳤는데 빨간줄 ㅇㅅㅇ;;;
+        /*// 여기 예제대로 쳤는데 빨간줄 ㅇㅅㅇ;;;
         static <T> int add2(T element){
             // (**중요**) 클래스 옆에 있는 T와, 메서드의 T는 다른 T.
             // 즉 클래스 선언할 때 String타입으로 선언했다고 해서, 이 메서드도 String타입이 되는 건 아니다.
@@ -48,7 +48,7 @@ public class GenericExample {
             // 메서드는 메서드가 호출될때! 생성되니까 이미 호출했을때는 타입이 선언됨.
 
             return 0;
-        }
+        }*/
     }
 
     // < > 안에 T가 Flower클래스를 상속받도록 지정되어있음.

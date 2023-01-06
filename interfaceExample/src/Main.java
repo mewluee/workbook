@@ -16,6 +16,9 @@ public class Main {
         CafeCustomerC c2=new CafeCustomerC("c2","coffee latte2"); // 하하 가능
         //CafeCustomerC c2=new CafeCustomer("c2","coffee latte2"); // 하상 불가능이라서 에러남
 
+
+
+
         // getItem(CafeCustomer cafeCustomer)
         cafeOwner.getItem(c1); // 상상 or 상하 (어쨌든 왼쪽이 상이면 무조건 가능.)
         cafeOwner.getItem(c2); // 상상 or 상하
