@@ -11,4 +11,5 @@
 ## 1. JAVA
 - [캡슐화, 다형성, 추상화, 상속](https://github.com/mewluee/workbook/blob/main/interfaceExample/src/Main.java) - 2022.12.30 [TIL](https://ld-luee.tistory.com/15)
 - [재귀함수](https://github.com/mewluee/workbook/blob/main/exercise/src/recursiveFunction/RecursiveFuctionExample.java) - 2023.01.12 [TIL](https://ld-luee.tistory.com/23)
-
+- [프린트 큐 구현하기 - Queue with ArrayList](https://github.com/mewluee/workbook/blob/main/java/src/queueExample/QueueExample.java) - 2023.01.17[TIL](https://ld-luee.tistory.com/24)
+- [프린트 큐 구현하기2 - Only Queue](https://github.com/mewluee/workbook/blob/main/java/src/queueExample/QueueReference.java) - 2023.01.17[TIL](https://ld-luee.tistory.com/24)
