@@ -147,4 +147,23 @@ public class QueueExample {
 
 
     }
+
+    public void howResult(){
+
+        //main메서드 입력 내용
+        QueueExample qe=new QueueExample();
+        int bufferSize = 2;
+        int capacities = 10;
+        int[] documents = new int[]{7,4,5,6};
+
+        int output5=qe.queuePrinter(bufferSize,capacities,documents);
+        System.out.println("코플릿5번:"+output5);
+
+
+
+        int[] boxes=new int[]{5,1,4,6};
+        Integer[] boxes2= Arrays.stream(boxes).boxed().toArray(Integer[]::new);
+        int output4=qe.paveBox(boxes2);
+        System.out.println("코플릿4번:"+output4);
+    }
 }
