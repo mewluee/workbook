@@ -208,13 +208,13 @@ public class RecursiveFuctionExample {
         int[] result=new int[arr.length];
 
         System.arraycopy(head,0,result,0,head.length);
+        //head
         System.arraycopy(tail, 0,result,head.length,tail.length);
-
-        return result;
+        //tail
 
         // 12345 > 5 + reverse[1234] > 5 + [ 4 + reverse[123] ] > ... > 5 + [ 4 + [ 3 + [ 2 + [1] ] ] ]
 
-
+        return result;
     }
 
     //코플릿 9번 문제 : 레퍼런스코드 구현해보기
