@@ -1,10 +1,20 @@
-package recursiveFunction;
+package recursiveExample;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-public class RecursiveFuctionExample {
+public class RecursiveExample {
+
+    public void howResult(){
+        //main입력방법
+        System.out.println("section2활동");/*
+        Scanner input=new Scanner(System.in);
+        int num=input.nextInt();*/
+        RecursiveExample rfe=new RecursiveExample();
+        //System.out.println("**"+Arrays.toString(rfe.reverseArr(new int[]{1,2,3,4,5,6,7})));
+        //System.out.println(Arrays.toString(rfe.take(5,new int[]{1,2,3,4,5,6,7})));
+        //System.out.println(Arrays.toString(rfe.reverseArr2(new int[]{1,2,3,4,5,6,7})));
+        System.out.println(Arrays.toString(rfe.take2(5,new int[]{1,2,3,4,5,6,7,8})));
+    }
 
     public void gugudan(int n, int count){
         //1. 작은 문제로 쪼개기(어느 부분이 어떻게 반복하느냐?)
@@ -113,7 +123,7 @@ public class RecursiveFuctionExample {
             System.out.println("num:"+num+" "+Arrays.toString(copyone));
             return copyone;
         }
-            //return copyone;
+        //return copyone;
         int[] copyother=Arrays.copyOfRange(arr,1, arr.length);
 //        System.out.println("arr:"+Arrays.toString(arr));
 //        System.out.println("copyother:"+Arrays.toString(copyother));
@@ -165,7 +175,7 @@ public class RecursiveFuctionExample {
 
         int[] copyone=Arrays.copyOfRange(arr,arr.length-1,arr.length); // 뒤에 있는 걸 하나씩 뗴어와서
         int[] copyother=Arrays.copyOfRange(arr,0,arr.length-1); //하나 빼고 나머지.
-       // System.out.println(Arrays.toString(copyone));
+        // System.out.println(Arrays.toString(copyone));
         //System.out.println(Arrays.toString(copyother));
         if(arr.length==1) {
             //System.out.println("길이 1 arr:"+Arrays.toString(arr));
