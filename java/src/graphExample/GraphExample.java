@@ -1,6 +1,7 @@
 package graphExample;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 public class GraphExample {
 
@@ -43,15 +44,22 @@ public class GraphExample {
 
         //출발한 노드로는 다시 돌아가지 않는다.
 
+        int[][] copyMatrix=new int[matrix.length][];
+
+        for(int k=0; k<matrix.length; k++){
+            int[] one=Arrays.copyOf(matrix[k],matrix[k].length);
+            copyMatrix[k]=one;
+        }
+
         System.out.println();
         System.out.println("-------------------------");
         System.out.println("getdirections들어옴");
         System.out.println("매개변수>from:"+from+" to:"+to);
         System.out.println("-------------------------");
 
-        if(matrix[from][to]==1) {
+        if(copyMatrix[from][to]==1) {
             System.out.println("존재함! 찾음! true반환!");
-            System.out.println("from:"+from+" to:"+to);
+            //System.out.println("from:"+from+" to:"+to);
             return true; // 바로 연결되면 트루 반환
         }
         else{ // 바로 연결이 아닐경우
@@ -61,19 +69,20 @@ public class GraphExample {
 
                 //from에서 연결된 노드 찾아서
                 //해당 노드를 from에 넣어서 재검색
-                if(matrix[from][i]==1){ //
+                if(copyMatrix[from][i]==1){ //
 
                     System.out.print("if문>");
                     System.out.println("**from:"+from+" i:"+i);
-                    matrix[from][i]=0;
-                    matrix[i][from]=0;
-                    from=i; // 다시 못돌아가게 0으로 만들어버림.
-                    boolean result= getDirections(matrix,from,to);
-                    if(result) flag=true;
+                    copyMatrix[from][i]=0;
+                    //matrix[i][from]=0; //무방향일때 없앰
+                    //from=i; // 다시 못돌아가게 0으로 만들어버림.
+                    //이 나쁜아이!!!from을 여기서 바꾸면서 for문의 from이 같이 바껴버림..ㅇㅇㅇ..
+                    //여기 예시에서는 길이 하나였지만 만약 길이 여러개였따면 ..!
+                    if(getDirections(copyMatrix,i,to)) return true;
+
                 }
             }
 
-            if(flag) return true;
             return false;
 
         }
@@ -131,5 +140,73 @@ public class GraphExample {
         }
 
         return resultMatrix;
+    }
+
+    public int connectedVertices(int[][] edges) {
+        // TODO:
+        //무향이라서 간선이 주어지면 일단 갔다가 오는건 무조건 가능.
+        //컴포넌트의 조건이란..무엇일까..?
+        //더이상 갈곳이 없으면 종료되야함.
+        //간 노드들을 어디에 담아야하나요??...???
+        //스택에 담아요..?
+        //탐색을 했는데 못가는 경우도있을거아냐.
+        //아 !
+        //0~5 노드가 있다고 치면
+        //0-1 2-3 4-5
+        //0에서 막 이케저케 노드타고갓는데도 1만 연결되어잇어서 1만 체크될거고
+        //다 체크가안됫으니까 1에서 노드타고가고 또 체크 다 안되고
+        //2~5까지 다하겟지?
+        //근데 이거 카운트는 어케 세냐ㅣ..?
+        //
+
+        //일단 매개변수로 들어온 2차원 배열 깊은 복사(값 복사/주소X/원본배열 그대로 유지)
+        int[][] copy=new int[edges.length][];
+        for(int i=0; i<copy.length; i++){
+            copy[i]=Arrays.copyOf(edges[i],edges[i].length); // 통째로 복사해서 새로운 배열로 반환하기때문에 copy에 저장(깊은복사) > 원본 손실 안함
+
+        }
+
+        //최소 최대 구해서
+        //boolean배열 만들기?>인접행렬구성
+        //min/max 값 구해서 행렬구현?
+        //어떻게 세지..?
+        //깊이우선>스택/재귀
+        //너비우선>큐
+
+        //간 노드는 삭제해버릴까..?
+
+        Stack<Integer> stack=new Stack<>();
+        //스택에 copy에 담긴 배열을 하나씩 시작
+        //주어진 값 기준으로
+        //copy를 순회해서 처음에 0넣고
+        //0에서 이어진게 1이니까 1넣고
+        //copy를 순회해서 1로 시작하는 값이 있으면 또 진행.
+        //없으면 스택에서 빼고
+        //스택이 0이 되는 순간 카운트+1
+        //copy에 담긴 0->1은 삭제해버리기
+        //>>스택에 어떤 타입의 데이터를 넣어야하는가?
+        //또 이제 안넣은 노드를 선택해서 스택에 넣기
+        //2넣고 3넣고 > 순회해서 3으로 시작하는게 있으면 또 넣는다
+        //4 넣고 > 4다음 없어서 > 4빼고 > 다시 3으로 돌아가고 > 5 검색.
+        //스택에 [ ] 배열이 통째로 들어가야할까? 아니면 숫자만 들어가야할까?
+        //>>일단 숫자만 넣고 구현해보자
+
+        //주어진 노드들이 다 삭제될때까지! 삭제가 덜 됬으면.계속 반복문 돌아감
+
+        while(copy.length>0){
+
+            //int end=copy[0][1];
+            stack.add(copy[0][0]); //스택의 시작 넣어주기.
+
+            for(int n=0; n<copy.length; n++){
+
+                int start=stack.peek();
+                if(start==copy[n][0]){
+                    stack.add(copy[n][1]);
+                }
+            }
+        }
+
+        return 0;
     }
 }
