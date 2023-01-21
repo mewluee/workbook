@@ -288,7 +288,7 @@ public class GraphExample {
 
         while(isNotDone){//sub DFS굴리기 // 모든 노드들을 방문 못했으니까! 돌려!
 
-            System.out.println("while문 시작");
+            System.out.println("while1(is not done)문 시작");
 
             //방문하지 않은 노드들을 시작점으로 찾기 위해서
             for(int k=0; k<visitedNode.length; k++){
@@ -302,8 +302,9 @@ public class GraphExample {
             System.out.println("visit확인:"+Arrays.toString(visitedNode));
 
 
-
+            //sub DFS실행
             while(!stack.isEmpty()){//스택이 비어있찌 않다면,
+                System.out.println("while2(isEmpty)문 시작");
 
                 //일단 비어있지않으니까 바로 연결할 수 있는 노드가 있는지 확인하기
                 //그러기 위해서는 pop하거나 peek해서 top에있는 노드를 가져와야하는데.
@@ -313,7 +314,7 @@ public class GraphExample {
 
                 //일단 pop써보기!
 
-                int findnode=stack.pop();
+                int findnode=stack.pop(); // 일단 top값 뽑아오기
 
                 /*
                 //dfs알고리즘 짤떄 입력값이
@@ -343,14 +344,25 @@ public class GraphExample {
                         visitedNode[one[1]]=true; // 방문한 노드에 추가하기
                     }
                 }*/
+                for(int[] one:edges){ // edges순회하기
+                    if(one[0]==findnode && !visitedNode[one[1]]){
+                        stack.push(one[1]);
+                        visitedNode[one[1]]=true;
+                    }else if(one[1]==findnode &&!visitedNode[one[0]]){
+                        stack.push(one[0]);
+                        visitedNode[one[0]]=true;
+                    }
+                }
 
             }
 
+            System.out.println("count++할떄 visit확인문:"+Arrays.toString(visitedNode));
             count++;
 
             for(int i=0; i<visitedNode.length; i++){
                 if(visitedNode[i]==false){
                     isNotDone=true;
+                    break;
                 }else if(i==visitedNode.length-1){
                     isNotDone=false;
                 }
