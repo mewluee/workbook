@@ -13,3 +13,4 @@
 - [재귀함수](https://github.com/mewluee/workbook/blob/main/exercise/src/recursiveFunction/RecursiveFuctionExample.java) - 2023.01.12 [TIL](https://ld-luee.tistory.com/23)
 - [프린트 큐 구현하기 - Queue with ArrayList](https://github.com/mewluee/workbook/blob/main/java/src/queueExample/QueueExample.java) - 2023.01.17 [TIL](https://ld-luee.tistory.com/24)
 - [프린트 큐 구현하기2 - Only Queue](https://github.com/mewluee/workbook/blob/main/java/src/queueExample/QueueReference.java) - 2023.01.17 [TIL](https://ld-luee.tistory.com/24)
+- [DFS 스택으로 구현하기](https://github.com/mewluee/workbook/blob/main/java/src/graphExample/GraphExample.java) - 2023.01.21 [TIL](https://ld-luee.tistory.com/25)
