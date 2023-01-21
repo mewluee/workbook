@@ -344,11 +344,12 @@ public class GraphExample {
                         visitedNode[one[1]]=true; // 방문한 노드에 추가하기
                     }
                 }*/
+                //수정한 코드
                 for(int[] one:edges){ // edges순회하기
-                    if(one[0]==findnode && !visitedNode[one[1]]){
+                    if(one[0]==findnode && !visitedNode[one[1]]){ // 여기여기 방문한 노드인지 확인하는 곳 인덱스 주의필요 ㅠ
                         stack.push(one[1]);
                         visitedNode[one[1]]=true;
-                    }else if(one[1]==findnode &&!visitedNode[one[0]]){
+                    }else if(one[1]==findnode &&!visitedNode[one[0]]){ // 여기여기 방문한 노드인지 확인하는 곳 인덱스 주의필요 ㅠ
                         stack.push(one[0]);
                         visitedNode[one[0]]=true;
                     }
@@ -362,7 +363,7 @@ public class GraphExample {
             for(int i=0; i<visitedNode.length; i++){
                 if(visitedNode[i]==false){
                     isNotDone=true;
-                    break;
+                    break; //false발견하면 바로 break처리해서 while문 또 굴령 ㅇ3ㅇ
                 }else if(i==visitedNode.length-1){
                     isNotDone=false;
                 }
