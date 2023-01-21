@@ -24,16 +24,17 @@ public class Main {
         System.out.println(output);*/
 
         GraphExample ge=new GraphExample();
-        int result = ge.connectedVertices(new int[][]{
+        int result = ge.connectedVertices3(new int[][]{
                 {0, 1},
                 {2, 3},
                 {8, 3},
                 {9, 3},
                 {7, 4},
                 {4, 6},
+                {4, 5},
                 {6, 5}
         });
-        System.out.println(result); //
+        System.out.println(result); //3
 
 
     }

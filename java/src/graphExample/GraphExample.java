@@ -374,4 +374,184 @@ public class GraphExample {
 
         return count;
     }
+
+    //수정 후 코드
+    public int connectedVertices2(int[][] edges) {
+        // TODO:
+
+        int max=0;
+        for(int i=0; i<edges.length; i++){
+            int submax;
+            if(edges[i][0]>edges[i][1]) submax=edges[i][0];
+            else submax=edges[i][1];
+            if(submax>max) max=submax;
+        }
+        boolean[] visitedNode=new boolean[max+1];
+        // 시작 노드는 늘 0이기때문에 +1해서 한칸 늘린 크기로 새 배열 만들어야함.
+        System.out.println(Arrays.toString(visitedNode));
+        //기본 초기값 false로 다 반환됨.
+
+        Stack<Integer> stack=new Stack<>();
+
+        int count=0; // count
+        boolean isNotDone=true; // 모든 노드들을 방문 다 못햇는가? yes > true
+
+        while(isNotDone){//sub DFS굴리기 // 모든 노드들을 방문 못했으니까! 돌려!
+
+            System.out.println("while1(isNotDone)문 시작");
+
+            //방문하지 않은 노드들을 시작점으로 찾기 위해서
+            for(int k=0; k<visitedNode.length; k++){
+                if(!visitedNode[k]){ //방문하지 않았다면!
+                    stack.add(k); //스택에 넣고 시작
+                    visitedNode[k]=true; //방문으로 해당 노드도 true만들기
+                    break;
+                }
+            }
+
+            System.out.println("visit확인:"+Arrays.toString(visitedNode));
+
+            //DFS실행
+            while(!stack.isEmpty()){//스택이 비어있찌 않다면,
+                System.out.println("while2(isEmpty)문 시작");
+
+                //일단 비어있지 않으니까 연결할 수 있는 노드가 있는지 확인하기
+                //그러기 위해 pop하거나 peek해서 top에있는 노드를 가져와야하는데.
+                //pop할 경우 따로 연결되어있는지 아닌지 따로 if문 조건문 돌려서 확인할 필요가 없다.
+                //근데 소스에 대한 직관적인 이해는 peek이 이해가 좀 잘됨.
+
+                //일단 pop써보기!
+                int findnode=stack.pop(); // 일단 top값 뽑아오기
+
+                /*
+                //dfs알고리즘 짤떄 입력값이
+                //예를 들어 {{}, {2,5,8}, {...}} 이면
+                //제일 첫번째 0번 인덱스를 비워둠. > 즉 노드가 1부터 시작해서 0번 인덱스는 안찾아볼라고 ㅎ
+                // >> 노드 1부터 시작해서 n개까지 > 근데 배열엔 n+1개의 공간이 있는거지 > 하지만 제일 0번 인덱스는 X
+                // >> 만약 노드가 0부터 시작했으면 딱 n개까지의 공간으로 구현
+                for(int find:copy[findnode]){
+                    //copy[findnode]는 배열을 반환하기 때문에 해당 배열의 요소들을 모두 다 순환하게 된다.
+                    // 예를 들어 findnode가 0이면
+                    // 해당 배열이 [0,1] 이기 떄문에
+                    // find에는 0 과 1 이 순차적으로 들어가서 돌아가게됨.
+
+                }
+                #$#@$@#$@#$중요한건 여기서는 이게 무의미함. 다른 입력값이 들어오기 때문임.$#%#$%#$%#$%#$
+                */
+
+                //내가 해야할 작업 copy의 모든 요소(배열)들의 0번 인덱스를 확인해서
+                //0번 인덱스=findnode 같으면 그 다음 1번 인덱스가 연결된 경로인거임. 그때 stack에 넣어줘야함!
+                /*for(int[] one:edges){
+                    if(one[0]==findnode){ //내가 찾는 경로의 시작점이 맞다면~
+                        stack.push(one[1]); //스택에 넣고
+                        visitedNode[one[1]]=true; // 방문한 노드에 추가하기
+                    }
+                }*/
+                //>>문제점 발견!
+                //입력값이 무방향 그래프다보니까
+                //0번 인덱스만 비교하면 다 비교가 불가능하다.
+                //예를 들어 3이라고 치면 3-8 , 3-9이지만 {9,3} 으로 입력되어있으면 찾질 못한다.
+
+                //수정한 코드
+                for(int[] one:edges){ // edges순회하기
+                    if(one[0]==findnode && !visitedNode[one[1]]){ // 여기여기 방문한 노드인지 확인하는 곳 인덱스 주의필요 ㅠ
+                        stack.push(one[1]);
+                        visitedNode[one[1]]=true;
+                    }else if(one[1]==findnode &&!visitedNode[one[0]]){ // 여기여기 방문한 노드인지 확인하는 곳 인덱스 주의필요 ㅠ
+                        stack.push(one[0]);
+                        visitedNode[one[0]]=true;
+                    }
+                }
+
+            }
+
+            System.out.println("count++할떄 visit확인문:"+Arrays.toString(visitedNode));
+            count++;
+
+            for(int i=0; i<visitedNode.length; i++){
+                if(visitedNode[i]==false){
+                    isNotDone=true;
+                    break; //false발견하면 바로 break처리해서 while문 또 굴린다.
+                }else if(i==visitedNode.length-1){
+                    isNotDone=false;
+                }
+            }
+
+
+        }
+
+        return count;
+    }
+
+    //수정 전 코드
+    public int connectedVertices3(int[][] edges) {
+        int max=0;
+
+        // 노드 개수 검사해야함.
+        for(int i=0; i<edges.length; i++){
+            int submax;
+            if(edges[i][0]>edges[i][1]) submax=edges[i][0];
+            else submax=edges[i][1];
+            if(submax>max) max=submax;
+        }
+
+        boolean[] visitedNode=new boolean[max+1];
+        //시작 노드는 늘 0이기때문에 +1해서 한칸 늘린 크기로 새 배열 만들어야함.
+        System.out.println(Arrays.toString(visitedNode));
+        //기본 초기값 false로 다 반환됨.
+
+        Stack<Integer> stack=new Stack<>();
+
+        int count=0; // count
+        boolean isNotDone=true; // 모든 노드들을 방문 다 못햇는가? yes > true
+
+        while(isNotDone){//sub DFS굴리기 // 모든 노드들을 방문 못했으니까! 돌려!
+
+            System.out.println("while1(isNotDone)문 시작");
+
+            //(1) 방문하지 않은 노드들을 시작점으로 찾기 위해서
+            for(int k=0; k<visitedNode.length; k++){
+                if(!visitedNode[k]){ //방문하지 않았다면!
+                    stack.add(k); //스택에 넣고 시작
+                    visitedNode[k]=true; //방문으로 해당 노드도 true만들기
+                    break;
+                }
+            }
+
+            System.out.println("visit확인:"+Arrays.toString(visitedNode));
+
+            //(2) DFS실행
+            while(!stack.isEmpty()){//스택이 비어있찌 않다면,
+                System.out.println("while2(isEmpty)문 시작");
+
+                //일단 pop써보기!
+                int findnode=stack.pop(); // 일단 top값 뽑아오기
+
+                for(int[] one:edges){
+                    if(one[0]==findnode){ //내가 찾는 경로의 시작점이 맞다면~
+                        stack.push(one[1]); //스택에 넣고
+                        visitedNode[one[1]]=true; // 방문한 노드에 추가하기
+                    }
+                }
+
+            }
+
+            System.out.println("count++할떄 visit확인문:"+Arrays.toString(visitedNode));
+            count++;
+
+            //(3) isNotDone변수 갱신작업
+            for(int i=0; i<visitedNode.length; i++){
+                if(visitedNode[i]==false){
+                    isNotDone=true;
+                    break; //false발견하면 바로 break처리해서 while문 또 굴린다.
+                }else if(i==visitedNode.length-1){
+                    isNotDone=false;
+                }
+            }
+
+
+        }
+
+        return count;
+    }
 }
