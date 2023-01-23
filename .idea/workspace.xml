@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e919284f-0885-4862-a75c-ce2714baf358" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/inheritanceAndinterfaceExample/CafeCustomer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/inheritanceAndinterfaceExample/CafeCustomer2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/inheritanceAndinterfaceExample/CafeCustomerC.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/inheritanceAndinterfaceExample/CafeCustomerD.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/inheritanceAndinterfaceExample/CafeOwner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/inheritanceAndinterfaceExample/CafeOwnerDo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/inheritanceAndinterfaceExample/InheritanceAndInterfaceExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/queueExample/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/queueExample/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/queueExample/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/queueExample/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/queueExample/queueExample.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/treegraphExample/GraphEx.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/treegraphExample/TreeEx.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/out/production/java/treegraphExample/TreeGraphExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/inheritanceAndinterfaceExample/InheritanceAndInterfaceExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/queueExample/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/queueExample/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/queueExample/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/queueExample/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercise/src/recursiveFunction/RecursiveFuctionExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/src/recursiveFunction/RecursiveFuctionExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/out/production/java/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/out/production/java/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/out/production/java/queueExample/QueueExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/out/production/java/queueExample/QueueExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="e919284f-0885-4862-a75c-ce2714baf358" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +26,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/yunid/Documents/study/code/workbook"
+    "last_opened_file_path": "C:/Users/yunid/Documents/study/code/workbook/algorithm"
   }
 }]]></component>
   <component name="RunManager">
