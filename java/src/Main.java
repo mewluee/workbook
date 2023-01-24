@@ -24,7 +24,7 @@ public class Main {
         System.out.println(output);*/
 
         GraphExample ge=new GraphExample();
-        int result = ge.connectedVertices3(new int[][]{
+        int result = ge.connectedVertices2(new int[][]{
                 {0, 1},
                 {2, 3},
                 {8, 3},
