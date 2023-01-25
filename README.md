@@ -14,3 +14,6 @@
 - [프린트 큐 구현하기 - Queue with ArrayList](https://github.com/mewluee/workbook/blob/main/java/src/queueExample/QueueExample.java) - 2023.01.17 [TIL](https://ld-luee.tistory.com/24)
 - [프린트 큐 구현하기2 - Only Queue](https://github.com/mewluee/workbook/blob/main/java/src/queueExample/QueueReference.java) - 2023.01.17 [TIL](https://ld-luee.tistory.com/24)
 - [DFS 스택으로 구현하기](https://github.com/mewluee/workbook/blob/main/java/src/graphExample/GraphExample.java) - 2023.01.21 [TIL](https://ld-luee.tistory.com/25)
+- [조합](https://github.com/mewluee/workbook/blob/main/java/src/combination/BlackJack.java) - 2023.01.25 [TIL](https://ld-luee.tistory.com/26)
+- [순열](https://github.com/mewluee/workbook/blob/main/java/src/permutation/NewChickenSauceRecipe.java) - 2023.01.25
+- [중복순열](https://github.com/mewluee/workbook/blob/main/java/src/permutation/RockPaperScissors.java) - 2023.01.25
