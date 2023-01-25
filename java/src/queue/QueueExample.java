@@ -1,4 +1,4 @@
-package queueExample;
+package queue;
 
 import java.util.*;
 
