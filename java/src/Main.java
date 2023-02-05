@@ -56,6 +56,10 @@ public class Main {
         cte.result();
 
         CharaterAndAsciicodeExample cae=new CharaterAndAsciicodeExample();
-        cae.result();
+        //cae.result();
+
+
     }
+
+
 }
