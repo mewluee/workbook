@@ -1,2 +1,6 @@
-package com.example.demo.chapter2.di;public class CafeClient {
+package com.example.demo.chapter2.di;
+
+public class CafeClient {
+
+
 }

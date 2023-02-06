@@ -58,6 +58,11 @@ public class Main {
         CharaterAndAsciicodeExample cae=new CharaterAndAsciicodeExample();
         //cae.result();
 
+        String st3="agfgeiu";
+        String co3="agfgeiu";
+        int result3=st3.compareTo(co3);
+        System.out.println(">>"+result3);
+
 
     }
 
