@@ -1,12 +1,18 @@
 package com.example.coreConcept.member;
 
 import com.example.coreConcept.DependencyConfig;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MemberTest {
 
     public static void main(String[] args){
-        DependencyConfig dependencyConfig=new DependencyConfig();
-        MemberService memberService = dependencyConfig.memberService();
+        //DependencyConfig dependencyConfig=new DependencyConfig();
+        //MemberService memberService = dependencyConfig.memberService();
+
+        ApplicationContext ac=new AnnotationConfigApplicationContext(DependencyConfig.class);
+        MemberService memberService=ac.getBean("memberService", MemberService.class);
+        //MemberService.class 타입의 memberService이름의 빈을 가져오겠다.
 
         Member member = new Member(0L, "lucky@codestates.com", "KimLucky", "010-1234-5678");
         memberService.createMember(member);

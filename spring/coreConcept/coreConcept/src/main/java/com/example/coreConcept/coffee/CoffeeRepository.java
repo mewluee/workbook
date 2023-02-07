@@ -1,8 +1,11 @@
 package com.example.coreConcept.coffee;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class CoffeeRepository {
     private static Map<Long, Coffee> drinks = new HashMap<>();
 

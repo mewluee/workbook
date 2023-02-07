@@ -1,11 +1,17 @@
 package com.example.coreConcept.coffee;
 
 import com.example.coreConcept.DependencyConfig;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class CoffeeTest {
     public static void main(String[] args){
-        DependencyConfig dependencyConfig=new DependencyConfig();
-        CoffeeService coffeeService = dependencyConfig.coffeeService();
+        //DependencyConfig dependencyConfig=new DependencyConfig();
+        //CoffeeService coffeeService = dependencyConfig.coffeeService();
+
+        ApplicationContext ac=new AnnotationConfigApplicationContext(DependencyConfig.class);
+        CoffeeService coffeeService=ac.getBean("coffeeService",CoffeeService.class);
+        //CoffeeService.class타입의 이름이 coffeeService의 빈을 불러오겠다.
 
         Coffee coffee = new Coffee(0L, "바닐라 라떼", "vanilla latte", 5000);
         coffeeService.createCoffee(coffee);

@@ -1,8 +1,13 @@
 package com.example.coreConcept.coffee;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class CoffeeService {
     private static CoffeeRepository coffeeRepository;
 
+    @Autowired
     public CoffeeService(CoffeeRepository coffeeRepository) {
         this.coffeeRepository=coffeeRepository;
     }
