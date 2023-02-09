@@ -15,6 +15,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 @Slf4j
 @SpringBootTest
 @Import({Aspect5.LogAspect.class, Aspect5.TxAspect.class})
+//@Import(Aspect2.class)
 public class AopTest {
 
     @Autowired
@@ -29,14 +30,17 @@ public class AopTest {
         log.info("isAopProxy, orderRepository={}", AopUtils.isAopProxy(orderRepository));
     }
 
+    //성공>커밋
     @Test
     void success() {
         orderService.orderItem("itemA");
     }
 
+    //실패->롤백
     @Test
     void exception() {
         assertThatThrownBy(() -> orderService.orderItem("ex"))
                 .isInstanceOf(IllegalStateException.class);
+        //
     }
 }

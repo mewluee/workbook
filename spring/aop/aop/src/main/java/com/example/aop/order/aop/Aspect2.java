@@ -14,7 +14,8 @@ public class Aspect2 {
 
     @Around("allOrder()")
     public Object logging(ProceedingJoinPoint joinPoint) throws Throwable {
-        log.info("log -> {}", joinPoint.getSignature());
+        log.info("log 111-> {}", joinPoint.getSignature());
         return joinPoint.proceed();
     }
+    //처음과 끝이면 두번호출되나?
 }

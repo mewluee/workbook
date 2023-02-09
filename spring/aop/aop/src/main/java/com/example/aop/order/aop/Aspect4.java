@@ -8,6 +8,10 @@ import org.aspectj.lang.annotation.Aspect;
 @Slf4j
 @Aspect
 public class Aspect4 {
+
+    //여기보면 Poincuts클래스 내부의 메서드를 참조하는데
+    //패키지명까지...착실하게..적어주자... 패키지명 제대로 안적으면 안됌...
+    //java폴더이후로 쭉 다 적어야함. java는 필요없음!
     @Around("com.example.aop.order.aop.Pointcuts.allOrder()")
     public Object logging(ProceedingJoinPoint joinPoint) throws Throwable {
         log.info("log -> {}", joinPoint.getSignature());
