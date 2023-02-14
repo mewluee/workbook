@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 
+//▼▼▼▼▼▼CoffeeController2 의 작동을 위해 주석처리▼▼▼▼▼▼
 //RestController -> 1.빈등록 2.엔드포인트로 동작함
-@RestController
+//@RestController
 //@RequestMapping(value=("v1/coffees"), produces = {MediaType.APPLICATION_JSON_VALUE})
-@RequestMapping("/v1/coffees")
+//@RequestMapping("/v1/coffees")
 public class CoffeeController {
 
     @PostMapping
