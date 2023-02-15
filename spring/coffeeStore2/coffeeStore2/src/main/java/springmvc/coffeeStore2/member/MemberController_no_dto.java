@@ -1,7 +1,6 @@
 package springmvc.coffeeStore2.member;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +15,7 @@ import java.util.Map;
 //▼▼▼▼▼▼MemberController2 의 작동을 위해 주석처리▼▼▼▼▼▼
 //@RestController //RestController -> 1.빈등록 2.엔드포인트로 동작함
 //@RequestMapping("/v1/members")
-public class MemberController {
+public class MemberController_no_dto {
     //클라이언트 요청 데이터를 서버에 생성할 때 사용하는 어노테이션
     //http method 타입을 동일하게 맞춰줘야함.
     //post는 늘 클라이언트에서 서버로 데이터를 보낼때 씀(클라이언트로부터 데이터를 받을때 씀)
