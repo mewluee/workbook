@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="17417d5e-c8ef-4edb-ac8e-7a5dbc320eb6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../algorithm/src/implement/WriteNumbersConsecutively1748.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithm/out/production/algorithm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../algorithm/out/production/algorithm/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithm/out/production/algorithm/binarysearch/FactorialCount11687.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../algorithm/out/production/algorithm/binarysearch/FactorialCount11687.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithm/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../algorithm/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../algorithm/src/binarysearch/FactorialCount11687.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../algorithm/src/binarysearch/FactorialCount11687.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2Lnbw4tL7dAqfkWLPyk4bHBbEUv" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/yunid/Documents/study/code/workbook/spring/demo"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17417d5e-c8ef-4edb-ac8e-7a5dbc320eb6" name="Changes" comment="" />
+      <created>1676510028309</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676510028309</updated>
+    </task>
+    <servers />
+  </component>
+</project>
