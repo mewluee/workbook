@@ -1,4 +1,6 @@
-public class Main {
+package interfaceExample.src;
+
+public class Main2 {
     public static void main(String[] args) {
         CafeOwner cafeOwner=new CafeOwner();
        // CafeCustomerA a=new CafeCustomerA();
